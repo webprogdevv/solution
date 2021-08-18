@@ -1,0 +1,19 @@
+<h3> Your Bill </h3>
+<table >
+  <tr>
+    <th>Item</th>
+    <th>Quantity</th>
+    <th> Price</th>
+  </tr>
+  <% @key_array.each_with_index do |element, index | %>
+	  <tr>
+	    <td><%=@key_array[index]%></td>
+	    <td><%=@value_array[index]%></td>
+	    <td><%=@item_total_array[index]%></td>
+	  </tr>
+	<% end %>  
+</table>
+</br>
+</br>
+<h3>Total price : $<%=@sub_total%></h3>
+<h3>You saved $<%=@save_total%> today.</h3>
